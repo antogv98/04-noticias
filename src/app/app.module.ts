@@ -14,10 +14,16 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [HttpClientModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [HttpClientModule,
+            BrowserModule, 
+            IonicModule.forRoot(), 
+            AppRoutingModule,
+            IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
