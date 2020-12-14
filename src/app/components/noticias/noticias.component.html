@@ -1,0 +1,28 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+            *ngFor="let noticia of noticias;let i =index">
+
+      <!-- <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>
+            <span  color="primary">{{ i+1 }}. </span>
+            
+            <span class="noticia-source-name">{{noticia.source.name}}</span>
+          </ion-card-subtitle>
+          <ion-card-title>{{noticia.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-img *ngIf="noticia.urlToImage"
+        [src]="noticia.urlToImage"></ion-img>
+        <ion-card-content>
+          <p>
+            {{noticia.description}}
+          </p>
+        </ion-card-content>
+      </ion-card> -->
+      <app-noticia [noticia]="noticia" [indice]="i"></app-noticia>
+
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
