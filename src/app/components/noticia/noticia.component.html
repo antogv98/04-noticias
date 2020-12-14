@@ -7,6 +7,15 @@
       <span class="noticia-source-name">{{noticia.source.name}}</span>
     </ion-card-subtitle>
 
+    <div class="noticia-more">
+      <ion-button (click)="lanzarMenu()" fill="clear">
+        <ion-icon slot="icon-only" 
+                  name="ellipsis-vertical-outline"
+                  class="colorIcono"
+        ></ion-icon>
+      </ion-button>
+    </div>
+
     <ion-card-title (click)="abrirNoticia()">{{noticia.title}}</ion-card-title>
   </ion-card-header>
   <ion-img *ngIf="noticia.urlToImage"
